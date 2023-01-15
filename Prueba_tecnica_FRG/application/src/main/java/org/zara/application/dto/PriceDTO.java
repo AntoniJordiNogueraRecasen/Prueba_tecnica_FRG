@@ -1,9 +1,11 @@
 package org.zara.application.dto;
 
+import org.springframework.stereotype.Repository;
+
 import java.util.Date;
 
+@Repository
 public class PriceDTO {
-    /*Variables*/
     private int brand_id;
     private Date start_date;
     private Date end_date;
@@ -15,7 +17,7 @@ public class PriceDTO {
 
     public PriceDTO(){}
 
-    /*GET Methods*/
+
     public int getBrand_id() {
         return brand_id;
     }
@@ -48,7 +50,7 @@ public class PriceDTO {
         return curr;
     }
 
-    /*SET Methods*/
+
     public void setBrand_id(int brand_id) {
         this.brand_id = brand_id;
     }

@@ -8,11 +8,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class RestTemplateConfiguration {
-    @Autowired
-    private RestTemplate restTemplate;
-
     @Bean
-    public RestTemplate restTemplate() {
-        return restTemplate;
+    public RestTemplate restTemplate(RestTemplateBuilder builder) {
+        return builder.build();
     }
 }
