@@ -21,3 +21,16 @@
 Esta Rest-API ha sido creada siguiendo una arquitectura Hexagonal la cual hace uso de adaptadores de persistencia y adaptadores web. La estructura se organiza en diferentes carpetas:
 
 ### -Application
+En esta carpeta vemos que se encuentra un apartado para el AOP, el DTO, las excepciones, el PortIn, el PortOut y el microservicio para el Price.
+
+### -Configuration
+En esta carpeta encontramos el SpringBootApplication y una carpeta llamada configuration la cual contiene la configuración del RestTemplate y la configuración de la seguridad de la aplicación.
+
+### -Domain
+En esta carpeta encontramos la clase Price. En esta carpeta podremos en un futuro introducir las futuras clases del dominio.
+
+### -Persistence Adapter
+En esta carpeta encontramos los adaptadores de persistencia, en este caso el PriceDAO.
+
+### -Web Adapter
+En esta carpeta encontramos el REST Controller de Price.
