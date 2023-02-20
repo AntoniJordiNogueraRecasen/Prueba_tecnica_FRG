@@ -19,4 +19,5 @@
 
 ## Estructura del proyecto
 Esta Rest-API ha sido creada siguiendo una arquitectura Hexagonal la cual hace uso de adaptadores de persistencia y adaptadores web. La estructura se organiza en diferentes carpetas:
-    ### - Application
+
+### -Application
