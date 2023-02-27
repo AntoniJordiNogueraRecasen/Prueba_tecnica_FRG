@@ -6,7 +6,7 @@ import org.zara.application.dto.PriceDTO;
 import org.zara.application.portIn.PriceUseCases;
 import org.zara.application.service.PricesService;
 
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
@@ -34,12 +34,12 @@ public class pricesRESTController {
     }
 
     @GetMapping("/prices/start_date/{start_date}/end_date/{end_date}")
-    public List<PriceDTO> getPrices(@PathVariable LocalDateTime start_date, @PathVariable LocalDateTime end_date) {
+    public List<PriceDTO> getPrices(@PathVariable Timestamp start_date, @PathVariable Timestamp end_date) {
         return pricesService.getPrice(start_date, end_date);
     }
 
     @GetMapping("/prices/start_date/{start_date}/end_date/{end_date}/brand_id/{brand_id}/product_id/{product_id}")
-    public List<PriceDTO> getPricesTesting(@PathVariable LocalDateTime start_date, @PathVariable LocalDateTime end_date, @PathVariable int brand_id, @PathVariable String product_id) {
+    public List<PriceDTO> getPricesTesting(@PathVariable Timestamp start_date, @PathVariable Timestamp end_date, @PathVariable int brand_id, @PathVariable String product_id) {
         return pricesService.getPriceTesting(start_date, end_date, brand_id, product_id);
     }
 

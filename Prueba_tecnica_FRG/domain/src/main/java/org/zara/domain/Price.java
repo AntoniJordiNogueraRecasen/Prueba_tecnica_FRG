@@ -1,12 +1,13 @@
 package org.zara.domain;
 
-import java.time.LocalDateTime;
+
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class Price {
     private int brand_id;
-    private LocalDateTime start_date;
-    private LocalDateTime end_date;
+    private Date start_date;
+    private Date end_date;
     private int price_list;
     private String product_id;
     private int priority;
@@ -30,12 +31,16 @@ public class Price {
         return brand_id;
     }
 
-    public LocalDateTime getStart_date() {
-        return start_date;
+    public Timestamp getStart_date() {
+        Timestamp retorn = new Timestamp(start_date.getDate());
+        retorn.setTime(start_date.getTime());
+        return retorn;
     }
 
-    public LocalDateTime getEnd_date() {
-        return end_date;
+    public Timestamp getEnd_date() {
+        Timestamp retorn = new Timestamp(end_date.getDate());
+        retorn.setTime(end_date.getTime());
+        return retorn;
     }
 
     public int getPrice_list() {
@@ -63,11 +68,11 @@ public class Price {
         this.brand_id = brand_id;
     }
 
-    public void setStart_date(LocalDateTime start_date) {
+    public void setStart_date(Date start_date) {
         this.start_date = start_date;
     }
 
-    public void setEnd_date(LocalDateTime end_date) {
+    public void setEnd_date(Date end_date) {
         this.end_date = end_date;
     }
 
@@ -108,8 +113,8 @@ public class Price {
 
     public static class PriceBuilder {
         private int brand_id;
-        private LocalDateTime start_date;
-        private LocalDateTime end_date;
+        private Date start_date;
+        private Date end_date;
         private int price_list;
         private String product_id;
         private int priority;
@@ -121,12 +126,12 @@ public class Price {
             return this;
         }
 
-        public PriceBuilder start_date(LocalDateTime start_date) {
+        public PriceBuilder start_date(Date start_date) {
             this.start_date = start_date;
             return this;
         }
 
-        public PriceBuilder end_date(LocalDateTime end_date) {
+        public PriceBuilder end_date(Date end_date) {
             this.end_date = end_date;
             return this;
         }

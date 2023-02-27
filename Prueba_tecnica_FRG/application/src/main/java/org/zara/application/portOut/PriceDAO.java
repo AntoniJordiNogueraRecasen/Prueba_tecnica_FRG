@@ -2,7 +2,7 @@ package org.zara.application.portOut;
 
 import org.zara.application.dto.PriceDTO;
 
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
@@ -13,9 +13,9 @@ public interface PriceDAO {
 
     List<PriceDTO> getPrice(String product_id);
 
-    List<PriceDTO> getPrice(LocalDateTime start_date, LocalDateTime end_date);
+    List<PriceDTO> getPrice(Timestamp start_date, Timestamp end_date);
 
-    List<PriceDTO> getPriceTesting(LocalDateTime start_date, LocalDateTime end_date, int brand_id, String product_id);
+    List<PriceDTO> getPriceTesting(Timestamp start_date, Timestamp end_date, int brand_id, String product_id);
 
     PriceDTO getPrice(int price_list);
 

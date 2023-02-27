@@ -8,8 +8,8 @@ DROP TABLE if EXISTS prices;
 CREATE TABLE prices
 (
     brand_id    INT,
-    start_date  DATE,
-    end_date    DATE,
+    start_date  TIMESTAMP,
+    end_date    TIMESTAMP,
     price_list  INT AUTO_INCREMENT PRIMARY KEY,
     product_id  VARCHAR(256),
     priority    INT,

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="webAdapter" />
+        <module name="persistenceAdapter" />
+        <module name="application" />
+        <module name="configuration" />
+        <module name="domain" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="application" target="15" />
+      <module name="configuration" target="15" />
+      <module name="domain" target="15" />
+      <module name="persistenceAdapter" target="15" />
+      <module name="Prueba_tecnica_FRG" target="15" />
+      <module name="webAdapter" target="15" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Prueba_tecnica_FRG.iml" filepath="$PROJECT_DIR$/.idea/Prueba_tecnica_FRG.iml" />
+      <module fileurl="file://$PROJECT_DIR$/application/application.iml" filepath="$PROJECT_DIR$/application/application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/configuration/configuration.iml" filepath="$PROJECT_DIR$/configuration/configuration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain/domain.iml" filepath="$PROJECT_DIR$/domain/domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/persistenceAdapter/persistenceAdapter.iml" filepath="$PROJECT_DIR$/persistenceAdapter/persistenceAdapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webAdapter/webAdapter.iml" filepath="$PROJECT_DIR$/webAdapter/webAdapter.iml" />
+    </modules>
+  </component>
+</project>

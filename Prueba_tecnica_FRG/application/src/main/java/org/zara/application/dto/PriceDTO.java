@@ -1,10 +1,8 @@
 package org.zara.application.dto;
 
-import org.springframework.stereotype.Repository;
-
+import java.sql.Timestamp;
 import java.util.Date;
 
-@Repository
 public class PriceDTO {
     private int brand_id;
     private Date start_date;
@@ -18,16 +16,18 @@ public class PriceDTO {
     public PriceDTO(){}
 
 
-    public int getBrand_id() {
-        return brand_id;
+    public int getBrand_id() { return brand_id; }
+
+    public Timestamp getStart_date() {
+        Timestamp retorn = new Timestamp(start_date.getDate());
+        retorn.setTime(start_date.getTime());
+        return retorn;
     }
 
-    public Date getStart_date() {
-        return start_date;
-    }
-
-    public Date getEnd_date() {
-        return end_date;
+    public Timestamp getEnd_date() {
+        Timestamp retorn = new Timestamp(end_date.getDate());
+        retorn.setTime(end_date.getTime());
+        return retorn;
     }
 
     public int getPrice_list() {
@@ -55,11 +55,9 @@ public class PriceDTO {
         this.brand_id = brand_id;
     }
 
-    public void setStart_date(Date start_date) {
-        this.start_date = start_date;
-    }
+    public void setStart_date(Timestamp start_date) { this.start_date = start_date; }
 
-    public void setEnd_date(Date end_date) {
+    public void setEnd_date(Timestamp end_date) {
         this.end_date = end_date;
     }
 
