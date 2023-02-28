@@ -32,15 +32,15 @@ public class Price {
     }
 
     public Timestamp getStart_date() {
-        Timestamp retorn = new Timestamp(start_date.getDate());
-        retorn.setTime(start_date.getTime());
-        return retorn;
+        Timestamp tm = new Timestamp(start_date.getDate());
+        tm.setTime(start_date.getTime());
+        return tm;
     }
 
     public Timestamp getEnd_date() {
-        Timestamp retorn = new Timestamp(end_date.getDate());
-        retorn.setTime(end_date.getTime());
-        return retorn;
+        Timestamp tm = new Timestamp(end_date.getDate());
+        tm.setTime(end_date.getTime());
+        return tm;
     }
 
     public int getPrice_list() {
@@ -68,11 +68,11 @@ public class Price {
         this.brand_id = brand_id;
     }
 
-    public void setStart_date(Date start_date) {
+    public void setStart_date(Timestamp start_date) {
         this.start_date = start_date;
     }
 
-    public void setEnd_date(Date end_date) {
+    public void setEnd_date(Timestamp end_date) {
         this.end_date = end_date;
     }
 
@@ -126,12 +126,12 @@ public class Price {
             return this;
         }
 
-        public PriceBuilder start_date(Date start_date) {
+        public PriceBuilder start_date(Timestamp start_date) {
             this.start_date = start_date;
             return this;
         }
 
-        public PriceBuilder end_date(Date end_date) {
+        public PriceBuilder end_date(Timestamp end_date) {
             this.end_date = end_date;
             return this;
         }

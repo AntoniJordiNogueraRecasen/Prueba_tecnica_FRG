@@ -19,15 +19,15 @@ public class PriceDTO {
     public int getBrand_id() { return brand_id; }
 
     public Timestamp getStart_date() {
-        Timestamp retorn = new Timestamp(start_date.getDate());
-        retorn.setTime(start_date.getTime());
-        return retorn;
+        Timestamp tm = new Timestamp(start_date.getDate());
+        tm.setTime(start_date.getTime());
+        return tm;
     }
 
     public Timestamp getEnd_date() {
-        Timestamp retorn = new Timestamp(end_date.getDate());
-        retorn.setTime(end_date.getTime());
-        return retorn;
+        Timestamp tm = new Timestamp(end_date.getDate());
+        tm.setTime(end_date.getTime());
+        return tm;
     }
 
     public int getPrice_list() {

@@ -23,19 +23,21 @@ public class pricesRESTController {
     @GetMapping("/prices")
     public List<PriceDTO> getPrices() { return pricesService.getPrices(); }
 
-    @GetMapping("/prices/{brand_id}")
+    @GetMapping("/prices/brand/{brand_id}")
     public List<PriceDTO> getPricesCadena(@PathVariable int brand_id) {
         return pricesService.getPriceCadena(brand_id);
     }
 
-    @GetMapping("/prices/{product_id}")
-    public List<PriceDTO> getPrices(@PathVariable String product_id) {
+    @GetMapping("/prices/product/{product_id}")
+    public List<PriceDTO> getPricesProductId(@PathVariable String product_id) {
         return pricesService.getPrice(product_id);
     }
 
     @GetMapping("/prices/start_date/{start_date}/end_date/{end_date}")
-    public List<PriceDTO> getPrices(@PathVariable Timestamp start_date, @PathVariable Timestamp end_date) {
-        return pricesService.getPrice(start_date, end_date);
+    public List<PriceDTO> getPricesBetweenDates(@PathVariable String start_date, @PathVariable String end_date) {
+        Timestamp start = new Timestamp(Date.parse(start_date));
+        Timestamp end = new Timestamp(Date.parse(end_date));
+        return pricesService.getPrice(start, end);
     }
 
     @GetMapping("/prices/start_date/{start_date}/end_date/{end_date}/brand_id/{brand_id}/product_id/{product_id}")
